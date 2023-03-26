@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    overflow: hidden;
+}
+
+.background{
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.forest{
+    background-image: url('forest.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.track{
+    background-image: url('track.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    height: 23vh;
+    width: 880vw;
+    top: 80%;
+    animation: carMove linear 13s infinite;
+    background-repeat: repeat-x;
+}
+.dino{
+    width: 20rem;
+    bottom: 18%;
+    position: absolute;
+    left: 0%;
+    
+}
+.obstacle{
+    width: 4rem;
+    position: absolute;
+    bottom: 18%;
+    left: 88%;
+    animation: obstacleImg 2s linear infinite;
+}
+.animateDino{
+    animation: dino .7s linear ;
+}
+.score{
+    border: red;
+    
+}
+
+@keyframes dino {
+    0%{
+        bottom:18%;
+    }
+    50%{
+        bottom:60%;
+    }
+    100%{
+        bottom:18%;
+    }
+    
+}
+@keyframes obstacleImg {
+    0%{
+        left:88%;
+    }
+   
+    100%{
+        left:-10%;
+    }
+    
+}
+@keyframes carMove{
+    100%{
+        transform: translateX(-500vw);
+
+    }
+    
+}
